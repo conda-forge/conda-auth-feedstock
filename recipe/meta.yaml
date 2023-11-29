@@ -1,13 +1,13 @@
 {% set name = "conda-auth" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version}}.tar.gz
-  sha256: ec0e26ac671f71069529696c6a4c67be5d1d92d79393091095559289fd11a3da
+  url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: a510cf0f24068905f1cc620cc11c50928ec207d66b1db42254522f521f7c42e8
 
 build:
   noarch: python
