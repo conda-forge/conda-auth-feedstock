@@ -1,5 +1,5 @@
 {% set name = "conda-auth" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/conda-incubator/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: c0520d782f99f5c70fcccc3ada84091e75788d49c67cc61586a66b60653cc6f3
+  sha256: 94080fc7a5a38c40b31d346383579e5c0ffc359e03463fecd30d695f12d05440
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }},<4.0.0
     - click
-    - conda >=23.9.0,<26.9.0a0
+    - conda >=23.9.0
     - keyring
     - requests
     - ruamel.yaml
